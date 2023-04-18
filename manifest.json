@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Harvest Pretty Colors",
+    "description": "An extension to get rid of clashing colors in Harvest",
+    "version": "1.0",
+    "icons": {
+        "16": "sun.png"
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://*.harvestapp.com/*"],
+          "css":["new_style.css"],
+          "run_at": "document_idle"
+        }
+    ],
+    "host_permissions": [
+        "https://*.harvestapp.com/*"
+    ]
+  }
